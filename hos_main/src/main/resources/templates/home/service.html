@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>科室介绍 - 患者服务 - 人民医院</title>
+
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/css/secondary.css}" type="text/css"/>
+    <script language="javascript" type="text/javascript" th:src="@{/js/KunyiHTML5.min.js}"></script>
+    <script language="javascript" type="text/javascript" th:src="@{/js/Kunyilibrary.js}"></script>
+</head>
+<body>
+<!--公共头部-->
+<div th:insert="~{home/common/header::topbar}"></div>
+
+<section class="listbanner banner02">
+    <div class="banner">
+        <div class="title"><h3>Patient Services</h3>
+            <h2>患者服务</h2></div>
+    </div>
+</section>
+<section class="listmain">
+    <div class="ksjs">
+        <div class="bread">当前位置：<a href="/hospital">首页</a> > <a href="/hospital/service">患者服务</a> > 科室介绍</div>
+        <div class="title">
+            <a class="active">内科</a><a>外科</a><a
+        >妇儿</a><a>体检中心</a><a
+        >医技科室</a><a>急诊医学</a><a
+                h>门诊部</a></div>
+        <div class="list">
+            <ul>
+                <li>
+                    <div class="title02"><em></em><a title="心血管内科一病区">心血管内科一病区</a></div>
+                    <p>人民医院重点学科，市心血管专业重点培育学科，“高血压防治中心……</p><a class="more2">更多</a></li>
+
+                <li>
+                    <div class="title02"><em></em><a title="心血管内科二病区	">心血管内科二病区 </a></div>
+                    <p>人民医院的重点学科，市心血管专业重点培育学科，“高血压防治中……</p><a class="more2">更多</a></li>
+
+                <li>
+                    <div class="title02"><em></em><a title="神经内科一病区">神经内科一病区</a></div>
+                    <p>我院重点专科，开设脑卒中绿色通道，确保急性缺血性卒中病人在最佳治疗时间窗内得……</p><a class="more2">更多</a></li>
+
+                <li>
+                    <div class="title02"><em></em><a h title="神经内科二病区">神经内科二病区</a></div>
+                    <p>我院重点专科，开设脑卒中绿色通道，确保急性缺血性卒中病人在最佳治疗时间窗内得……</p><a class="more2">更多</a></li>
+
+                <li>
+                    <div class="title02"><em></em><a title="中医康复科">中医康复科</a></div>
+                    <p>科训 : 以人为本，中西结合 针灸推拿……</p><a class="more2">更多</a></li>
+
+                <li>
+                    <div class="title02"><em></em><a title="呼吸内科">呼吸内科</a></div>
+                    <p>对肺炎，慢阻肺，哮喘，急性支气管炎，肺间质纤维化，呼吸衰竭有有丰富的临床治疗……</p><a class="more2">更多</a></li>
+
+                <li>
+                    <div class="title02"><em></em><a title="感染性疾病科">感染性疾病科</a></div>
+                    <p>集教学、医疗、健康咨询、康复指导为一体的综合性科室，承担全县感染性疾病的预防……</p><a class="more2">更多</a></li>
+
+                <li>
+                    <div class="title02"><em></em><a title="内分泌科">内分泌科</a></div>
+                    <p>东区内科是以内分泌、消化及神经内科为主的综合学科。现拥有高级职称2人，硕士研……</p><a class="more2">更多</a></li>
+
+                <li>
+                    <div class="title02"><em></em><a title="肿瘤肾病科">肿瘤肾病科</a></div>
+                    <p>人民医院肿瘤肾病科是唯一的肿瘤肾病诊治专业科室，开放床位35张，……</p><a class="more2">更多</a></li>
+
+                <li>
+                    <div class="title02"><em></em><a title="重症监护病房（ICU）">重症监护病房（ICU）</a></div>
+                    <p>负责全院各类危重病人集中抢救与治疗，目前是及周边县市最先进和规模最……</p><a class="more2">更多</a></li>
+
+
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</section>
+
+<!--公共尾部-->
+<div th:insert="~{home/common/footer::foot}"></div>
+<script language="javascript" type="text/javascript" th:src="@{js/Kunyi.Common.js}"></script>
+<script language="javascript" type="text/javascript" th:src="@{js/Kunyi.Secondary.js}"></script>
+</body>
+</html>

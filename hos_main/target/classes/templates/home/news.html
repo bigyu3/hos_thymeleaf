@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻中心 - 新闻中心 - 人民医院</title>
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/css/secondary.css}" type="text/css"/>
+    <script language="javascript" type="text/javascript" th:src="@{/js/KunyiHTML5.min.js}"></script>
+    <script language="javascript" type="text/javascript" th:src="@{/js/Kunyilibrary.js}"></script>
+</head>
+<body>
+<!--公共头部-->
+<div th:insert="~{home/common/header::topbar}"></div>
+
+<section class="listbanner banner05">
+    <div class="banner">
+        <div class="title"><h3>News Center</h3>
+            <h2>新闻中心</h2></div>
+    </div>
+</section>
+
+<section class="BaseMark listmain">
+    <div class="bread">当前位置：<a href="/hospital">首页</a>  > 新闻中心</div>
+    <div class="listleft">
+        <div class="tools"><a class="first" href="javascript:;"><em class="t01"></em>预约挂号</a><a href="/home/expert"><em
+                class="t02"></em>专家介绍</a><a class="first" href="/home/service"><em class="t03"></em>科室介绍</a><a
+                href="/hospital/guide"><em class="t04"></em>就医指南</a></div>
+    </div>
+    <div class="listright">
+        <div class="title">新闻中心</div>
+        <div class="listnews">
+            <ul>
+                <li><h4>医院 故事 | 他用两个小时，帮她拨开了“半辈子”的雾霾......<span>[2018-12-12]</span></h4></li>
+                <li><h4>医院 故事 |“十面埋伏”下，他们奋勇突围！<span>[2019-01-04]</span></h4></li>
+                <li><h4>一天内三人入院，有76岁老人、64岁阿姨、还有44岁壮年，到底发生了什么...<span>[2018-12-24]</span></h4>
+                </li>
+                <li><h4>医院  新闻 | 市政法委督导小组莅临我院检查“平安医院”创建工作<span>[2018-12-28]</span></h4></li>
+                <li><h4>小伙身上被扎了24针，究竟是谁这么狠？<span>[2018-12-28]</span></h4>
+                </li>
+                <li><h4>注意，注意！三九贴开始啦!<span>[2018-12-30]</span></h4>
+                </li>
+                <li><h4>医院  故事 |NICU,呵护幼小生命的地方。<span>[2019-01-07]</span></h4></li>
+                <li><h4>医院   故事 | 明明可以靠脸，还那么有实力，原来是他们......<span>[2019-01-09]</span></h4></li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</section>
+
+<!--公共尾部-->
+<div th:insert="~{home/common/footer::foot}"></div>
+<script language="javascript" type="text/javascript" th:src="@{js/Kunyi.Common.js}"></script>
+<script language="javascript" type="text/javascript" th:src="@{js/Kunyi.Secondary.js}"></script>
+</body>
+</html>

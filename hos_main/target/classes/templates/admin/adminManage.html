@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>管理员管理</title>
+    <link rel="stylesheet" th:href="@{/css/layui.min.css}">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!-- 引入公共头部开始 -->
+    <div th:replace="~{admin/common/header :: admintopbar}"></div>
+    <!-- 引入公共头部结束 -->
+
+    <div class="layui-body">
+
+        <!-- 内容主体区域 -->
+        <div style="padding: 15px;">
+            <h5>管理员管理</h5>
+            <form th:action="@{/admin/user/manage}" method="get">
+                <table>
+                    <tr>
+                        <!--这一段是搜索框的表单-->
+                        <td>账号:</td>
+                        <td><input name="username"  autocomplete="off"  class="layui-input lay-size=sm" ></td>
+                        <td><button class="layui-btn" type="submit"><i class="layui-icon">&#xe615;</i></button></td>
+                    </tr>
+                </table>
+            </form>
+            <!--表格-->
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col width="200">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>账号</th>
+                    <th>密码</th>
+                    <th>操作&nbsp;&nbsp;&nbsp;&nbsp;
+                        <!--<button class="layui-btn" th:onclick="showAdd('/admin/user/')"><i class="layui-icon">&#xe608;</i> 添加</button>-->
+                        <button class="layui-btn" th:onclick="|showAdd('/admin/user/')|"><i class="layui-icon">&#xe608;</i> 添加</button>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--<%for(a in page.list){%>-->
+                <!--th:each循环遍历   里面model返回过来的-->
+                <!--records 是一个List<User> -->
+                <tr th:each="oneUser : ${page.records}">
+                    <!--<td th:text="${aLP.index}">${aLP.index}</td>-->
+                    <td th:text="${oneUser.id}"></td>
+                    <td th:text="${oneUser.username}"></td>
+                    <td>**********</td>
+                    <td>
+                        <!--<button class="layui-btn" onclick="edit('/admin/user/',${a.id})"><i class="layui-icon">&#xe642;</i></button>-->
+                        <!--<a th:onclick="${'xadmin.add_tab(''Search'','''} + @{/app/xx} + ${''')'}">链接名</a>-->
+
+                        <!--<button class="layui-btn" th:onclick="edit('admin/user/edit/',[[${oneUser.id}]])"><i class="layui-icon">&#xe642;</i></button>-->
+
+                        <button class="layui-btn" th:onclick="edit1('/admin/user/edit/'+[[${oneUser.id}]])"><i class="layui-icon">&#xe642;</i></button>
+                        <!--th:onclick 传递参数 [[]${}] ,这里传了2个参数-->
+                        <!--<button class="layui-btn" onclick="del('/admin/user/',${a.id})"><i class="layui-icon">&#xe640;</i></button>-->
+                        <button class="layui-btn" th:onclick="del('/admin/user/',[[${oneUser.id}]] )"><i class="layui-icon">&#xe640;</i></button>
+                    </td>
+                </tr>
+                <!--<%}%>-->
+                </tbody>
+            </table>
+            <div id="pagination"></div>
+        </div>
+    </div>
+    <!-- 引入公共脚部文件开始 -->
+    <div th:replace="~{admin/common/footer :: footer_lay}"></div>
+    <!-- 引入公共脚部文件结束 -->
+    <!-- 引入公共分页脚本文件开始 -->
+    <div th:replace="~{admin/common/page :: page_lay}"></div>
+    <!-- 引入公共分页脚本文件结束 -->
+
+</div>
+</body>
+</html>

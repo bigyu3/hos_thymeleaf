@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>坐诊时间表 - 就医指南 - 人民医院</title>
+
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/css/secondary.css}" type="text/css"/>
+    <script language="javascript" type="text/javascript" th:src="@{/js/KunyiHTML5.min.js}"></script>
+    <script language="javascript" type="text/javascript" th:src="@{/js/Kunyilibrary.js}"></script>
+</head>
+<body>
+<!--公共头部-->
+<div th:insert="~{home/common/header::topbar}"></div>
+
+<section class="listbanner banner03">
+    <div class="banner">
+        <div class="title"><h3>Consultation Schedule</h3>
+            <h2>坐诊时间表</h2></div>
+    </div>
+</section>
+
+<section class="listmain">
+    <div class="bread">当前位置：<a href="/hospital">首页</a> >  坐诊时间表</div>
+    <div class="xzys zzsj">
+        <div class="title">坐诊时间表</div>
+        <div class="title01">
+            <a class="active" href="DutyTime-1.html" title="内科">内科</a>
+            <a title="外科">外科</a>
+            <a title="急诊">急诊</a>
+            <a title="门诊部">门诊部</a></div>
+        <div class="visitdate">
+            <div class="visittitle">
+                <span>星期一</span><span>星期二</span><span>星期三</span><span>星期四</span><span>星期五</span><span
+                    class="blue">星期六</span><span class="blue">星期日</span></div>
+
+            <dl>
+                <dt><h3>内科</h3></dt>
+                <dd class="am"><p>上午</p>
+                    <span><a target="_blank" href="/hospital/expertintroduction">李雷</a><a target="_blank"
+                    >韩梅梅</a></span>
+
+                    <span><a target="_blank" href="/hospital/expertintroduction2">王一一</a><a target="_blank"
+                    >韩梅梅</a></span>
+
+                    <span><a target="_blank" href="Doctor-127.html">李雷</a><a target="_blank"
+                    >刘瑞</a></span>
+
+                    <span><a target="_blank" href="Doctor-155.html">王一一</a><a target="_blank"
+                    >韩梅梅</a></span>
+
+                    <span>&nbsp;</span>
+
+                    <span><a target="_blank" href="Doctor-128.html">韩梅梅</a><a target="_blank"
+                    >刘瑞</a></span>
+
+                    <span><a target="_blank" href="Doctor-128.html">韩梅梅</a></span></dd>
+                <dd class="pm"><p>下午</p>
+
+                    <span><a target="_blank" href="Doctor-86.html">李雷</a><a target="_blank"
+                    >刘瑞</a></span>
+
+                    <span>&nbsp;</span>
+
+                    <span><a target="_blank" href="Doctor-127.html">李雷</a><a target="_blank"
+                    >王一一</a></span>
+
+                    <span>&nbsp;</span>
+
+                    <span>&nbsp;</span>
+
+                    <span><a target="_blank">刘瑞</a><a target="_blank"
+                    >李雷</a></span>
+
+                    <span><a target="_blank">韩梅梅</a></span>
+                </dd>
+                <dd class="clear"></dd>
+            </dl>
+
+            <dl>
+                <dt><h3>外科</h3></dt>
+                <dd class="am"><p>上午</p>
+                    <span><a target="_blank">王五</a><a target="_blank"
+                    >赵志</a></span>
+
+                    <span><a target="_blank">王五</a></span>
+
+                    <span><a target="_blank">丁丽</a></span>
+
+                    <span><a target="_blank">王五</a><a target="_blank"
+                    >赵志</a></span>
+
+                    <span><a target="_blank">赵志</a></span>
+
+                    <span><a target="_blank">王青</a><a target="_blank"
+                    >丁丽 </a></span>
+
+                    <span><a target="_blank">王青</a><a target="_blank"
+                    >丁丽</a></span></dd>
+                <dd class="pm"><p>下午</p>
+
+                    <span><a target="_blank">丁丽</a><a target="_blank"
+                    >赵志</a></span>
+
+                    <span><a target="_blank">王青</a></span>
+
+                    <span><a target="_blank">王五</a></span>
+
+                    <span><a target="_blank">王青</a><a target="_blank"
+                    >赵志</a></span>
+
+                    <span><a target="_blank">王青</a></span>
+
+                    <span><a target="_blank">赵志</a><a target="_blank"
+                    >丁丽 </a></span>
+
+                    <span><a target="_blank">赵志</a><a target="_blank"
+                    >丁丽</a></span>
+                </dd>
+                <dd class="clear"></dd>
+            </dl>
+
+            <dl>
+                <dt><h3>急诊</h3></dt>
+                <dd class="am"><p>上午</p>
+                    <span><a target="_blank">杨丽娟</a></span>
+
+                    <span><a target="_blank">郝新景</a></span>
+
+                    <span><a target="_blank">邢一川</a></span>
+
+                    <span><a target="_blank">朱铭</a></span>
+
+                    <span><a target="_blank">李鑫</a></span>
+
+                    <span><a target="_blank">杨丽娟</a></span>
+
+                    <span><a target="_blank">邢一川</a></span></dd>
+                <dd class="pm"><p>下午</p>
+
+                    <span><a target="_blank">郝新景</a></span>
+
+                    <span><a target="_blank">朱铭</a></span>
+
+                    <span><a target="_blank">李鑫</a></span>
+
+                    <span><a target="_blank">邢一川</a></span>
+
+                    <span><a target="_blank">杨丽娟</a></span>
+
+                    <span><a target="_blank">郝新景</a></span>
+
+                    <span><a target="_blank">朱铭</a></span>
+                </dd>
+                <dd class="clear"></dd>
+            </dl>
+
+            <dl>
+                <dt><a>门诊</a></dt>
+                <dd class="am"><p>上午</p>
+                    <span><a target="_blank">邵一博</a></span>
+
+                    <span><a target="_blank">邵一博</a><a target="_blank"
+                    >丁晓</a></span>
+
+                    <span><a target="_blank">邵一博</a><a target="_blank"
+                    >丁晓</a></span>
+
+                    <span><a target="_blank">王斌</a><a target="_blank"
+                    >丁晓</a></span>
+
+                    <span><a target="_blank">师诗</a><a target="_blank"
+                    >马勇</a></span>
+
+                    <span><a target="_blank">师诗</a><a target="_blank"
+                    >马勇</a></span>
+
+                    <span><a target="_blank">马勇</a></span></dd>
+                <dd class="pm"><p>下午</p>
+
+                    <span><a target="_blank">师诗</a></span>
+
+                    <span><a target="_blank">师诗</a><a target="_blank"
+                    >马勇</a></span>
+
+                    <span><a target="_blank">师诗</a><a target="_blank"
+                    >马勇</a></span>
+
+                    <span><a target="_blank">王昊</a><a target="_blank"
+                    >马勇</a></span>
+
+                    <span><a target="_blank">王昊</a><a target="_blank"
+                    >马勇</a></span>
+
+                    <span><a target="_blank">王昊</a><a target="_blank"
+                    >马勇</a></span>
+
+                    <span><a target="_blank">马勇</a></span>
+                </dd>
+                <dd class="clear"></dd>
+            </dl>
+
+
+
+        </div>
+    </div>
+    <div class="notice">
+        <h4>温馨提示</h4>
+        <p>我院医师肩负着外出会诊、学术活动、教学、外出进修、出国学习、下乡等任务，因此出诊时间会临时调整，以当天出诊医师为准。此表仅供参考。</p>
+    </div>
+</section>
+
+
+
+
+<!--公共尾部-->
+<div th:insert="~{home/common/footer::foot}"></div>
+<script language="javascript" type="text/javascript" th:src="@{js/Kunyi.Common.js}"></script>
+<script language="javascript" type="text/javascript" th:src="@{js/Kunyi.Secondary.js}"></script>
+</body>
+</html>

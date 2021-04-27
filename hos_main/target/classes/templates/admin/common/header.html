@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--thymeleaf支持-->
+<!--这里提取公共模板 头部-->
+<div class="layui-header" th:fragment="admintopbar">
+    <div class="layui-logo" th:onclick="window.location.href='/admin/index/'"><span>欢迎进入</span>医疗系统<span>后台管理</span></div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item">
+            <a href="javascript:">系统管理</a>
+            <dl class="layui-nav-child">
+                <dd><a th:href="@{/admin/doctor/manage}">医生管理</a></dd>
+                <dd><a th:href="@{/admin/patient/manage}">患者管理</a></dd>
+                <dd><a th:href="@{/admin/drugs/manage}">药品管理</a></dd>
+                <dd><a th:href="@{/admin/option/manage}">科目查询管理</a></dd>
+                <dd><a th:href="@{/admin/illness/manage}">疾病管理</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item" ><a th:href="@{/admin/appointment/manage}">预约管理</a></li>
+        <li class="layui-nav-item" ><a th:href="@{/admin/medicalHistory/manage}">病史管理</a></li>
+        <li class="layui-nav-item" ><a th:href="@{/admin/hospitalization/manage}">住院信息管理</a></li>
+        <li class="layui-nav-item" ><a th:href="@{/admin/user/manage}">管理员管理</a></li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+            <a href="javascript:" th:text="'欢迎&nbsp&nbsp&nbsp&nbsp'+${session.user.username}"></a>
+            <!--<a href="javascript:" >欢迎  [[${session.user.username}]]</a>-->
+        </li>
+        <li class="layui-nav-item"><a th:href="@{/home/user/logout}">退出登录</a></li>
+    </ul>
+</div>
+
+
+</html>
+

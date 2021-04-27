@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--thymeleaf支持-->
+<!--这里提取公共模板 头部-->
+<div  th:fragment="topbar">
+<header>
+    <a class="logo" href="/home">
+        <img th:src="@{/images/logo.png}" width="300" height="70"/>
+    </a>
+</header>
+<nav>
+    <div class="nav">
+        <ul>
+            <li class="PMenu ${cur == 'index' ? 'current'}"><a th:href="@{/home/index}" class="PAMenu">网站首页</a></li>
+            <li class="PMenu ${cur == 'introduction' ? 'current'}"><a th:href="@{/home/introduction}" id="Nav_AMenu0" class="PAMenu" title="医院简介">医院简介</a></li>
+            <li class="PMenu ${cur == 'expert' ? 'current'}"><a th:href="@{/home/expert}" id="Nav_AMenu1" class="PAMenu" title="患者服务">专家团队</a></li>
+            <li class="PMenu ${cur == 'service' ? 'current'}"><a th:href="@{/home/service}" id="Nav_AMenu2" class="PAMenu" title="患者服务">患者服务</a></li>
+            <li class="PMenu ${cur == 'seekGuide' ? 'current'}"><a th:href="@{/home/seekGuide}" id="Nav_AMenu3" class="PAMenu" title="坐诊时间">坐诊时间</a></li>
+            <li class="PMenu ${cur == 'guide' ? 'current'}"><a th:href="@{/home/guide}" id="Nav_AMenu4" class="PAMenu" title="就医指南">就医指南</a></li>
+            <li class="PMenu ${cur == 'news' ? 'current'}"><a th:href="@{/home/news}" id="Nav_AMenu5" class="PAMenu" title="新闻中心">新闻中心</a></li>
+            <li class="PMenu"><a th:href="@{/home/user/login}" id="Nav_AMenu6" class="PAMenu" title="登录注册">登录注册</a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</nav>
+</div>
+</html>
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="formfooter_lay">
+    <script th:src="@{/js/layui.all.js}"></script>
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript">
+        layui.use('form', function(){
+            var form = layui.form;
+            form.render();
+        });
+        function save(url){
+            var d = {};//js对象
+            var _type = 'post';
+            var t = $('form').serializeArray(); //以数组形式返回json对象 [{name:"username",value:"xxx'},{"name:id",value:xxx},{}]
+            $.each(t, function() {
+                d[this.name] = this.value; //这里是d[this.name] == d.this.name |  d.username= xxx
+                if (this.name == "id" && this.value != '') {
+                    _type = 'put';
+                }
+            });
+
+            var json=JSON.stringify(d);
+            $.ajax({
+                url:url,
+                type:_type,
+                data:json,
+                contentType: "application/json;charset=utf-8",
+                success:function(data){
+                    console.log(data.message);
+                    if (data.code == '301'){
+                        $("#message").text(data.message);
+                    } else {
+                        parent.location.reload();
+                    }
+                },
+                error:function (data) {
+                    layer.msg(data.message, {
+                        time: 2000, //2s后自动关闭
+                    });
+                }
+            });
+            return false
+        }
+        layui.use(['layer', 'form'], function(){
+            var layer = layui.layer
+                ,form = layui.form;
+            form.on('select(department)', function(data){
+                var department=(data.value);
+                $.ajax({
+                    type: 'GET',
+                    url: '/admin/doctor/getList/'+department,
+                    dataType:  'json',
+                    success: function(data){
+                        $("#doctorId").empty();
+                        // data=data.doctors;
+                        data.forEach(function(item){
+                            var name=item.name;
+                            console.log(name);
+                            var id=item.id;
+                            console.log(id);
+                            $("#doctorId").append("<option value="+id+">"+name+"</option>");
+                        });
+                        form.render('select');
+                    }
+                });
+            });
+
+        });
+    </script>
+
+</div>
+</html>
+

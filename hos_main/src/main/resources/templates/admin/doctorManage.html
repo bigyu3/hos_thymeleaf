@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>医生管理界面</title>
+    <link rel="stylesheet" th:href="@{/css/layui.min.css}">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!-- 引入公共头部开始 -->
+    <div th:replace="~{admin/common/header :: admintopbar}"></div>
+    <!-- 引入公共头部结束 -->
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 15px;">
+            <h5>医生管理</h5>
+            <form th:action="@{/admin/doctor/manage}" method="get">
+                <table>
+                    <tr>
+                        <td>昵称:</td>
+                        <td><input name="name" autocomplete="off"  class="layui-input lay-size=sm">
+                        </td>
+                        <td>&nbsp;&nbsp;证件号:</td>
+                        <td><input name="idcard" autocomplete="off"
+                                   class="layui-input lay-size=sm"></td>
+                        <td>
+                            <button class="layui-btn" type="submit"><i class="layui-icon">&#xe615;</i></button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <table class="layui-table">
+                <colgroup>
+                    <col width="100">
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>昵称</th>
+                    <th>是否为专家</th>
+                    <th>年纪</th>
+                    <th>性别</th>
+                    <th>证件号</th>
+                    <th>所属部门</th>
+                    <th>家庭住址</th>
+                    <th>操作&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="layui-btn" th:onclick="showAdd('/admin/doctor/')"><i
+                                class="layui-icon">&#xe608;</i> 添加
+                        </button>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="oneDoctor : ${page.records}">
+                    <td th:text="${oneDoctor.id}"></td>
+                    <td th:text="${oneDoctor.name}"></td>
+                    <td th:text="${oneDoctor.expert == 1 ? '专家' : '非专家'}">
+                    </td>
+                    <td th:text="${oneDoctor.age}"></td>
+                    <td th:text="${oneDoctor.gender == 0 ? '男' : '女'}">
+                    </td>
+                    <td th:text="${oneDoctor.idcard}"></td>
+                    <td th:text="${oneDoctor.department}"></td>
+                    <td th:text="${oneDoctor.address}"></td>
+                    <td>
+                        <button class="layui-btn" th:onclick="edit1('/admin/doctor/edit/'+[[${oneDoctor.id}]])"><i
+                                class="layui-icon">&#xe642;</i></button>
+                        <button class="layui-btn" th:onclick="del('/admin/doctor/',[[${oneDoctor.id}]])"><i
+                                class="layui-icon">&#xe640;</i></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="pagination"></div>
+        </div>
+    </div>
+    <!-- 引入公共脚部文件开始 -->
+    <div th:replace="~{admin/common/footer :: footer_lay}"></div>
+    <!-- 引入公共脚部文件结束 -->
+    <!-- 引入公共分页脚本文件开始 -->
+    <div th:replace="~{admin/common/page :: page_lay}"></div>
+    <!-- 引入公共分页脚本文件结束 -->
+</div>
+
+
+
+
+
+</body>
+</html>

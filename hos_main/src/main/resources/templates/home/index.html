@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="人民医院,医院,人民医院官网,人民医院"/>
+    <meta name="Description"
+          content="人民医院始建于1932于商都大道2996号，占地188亩，一期建筑面积7.5万平方米，开放床位938张，于2013年7月建成投入使用。东区医院地处县城中心，解放路64号，占地35亩，医疗业务建筑面积2.2万平方米，开放床位265张。医院设置临床科室25个，医技科室8个，特殊医疗护理8个。专科齐全、分类设置合理，专业优势明显。"/>
+    <meta name="robots" content="All"/>
+    <meta name="baidu-site-verification" content="MAx1X1xHwo"/>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=/noscript.htm"/>
+    </noscript>
+    <!--这里th:href th:src  @{/}开头一定要加/-->
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/css/index.css}" type="text/css"/>
+    <script language="javascript" type="text/javascript" th:src="@{/js/KunyiHTML5.min.js}"></script>
+    <script language="javascript" type="text/javascript" th:src="@{/js/Kunyilibrary.js}"></script>
+    <script language="javascript" type="text/javascript" th:src="@{/js/Kunyi.Common.js}"></script>
+    <script language="javascript" type="text/javascript" th:src="@{/js/Kunyi.Index.js}"></script>
+    <title>Title</title>
+</head>
+<body>
+<!--引入公共头部-->
+<div th:insert="~{home/common/header::topbar}"></div>
+<!--引入公共头部-->
+
+<!--快捷导航和轮播图-->
+<section class="bannerBase">
+    <div class="quickMenu">
+        <div class="title">快捷导航</div>
+        <ul>
+            <li><a th:href="@{/home/expert}"><span class="style01"></span>专家介绍</a></li>
+            <li class="grey"><a th:href="@{/home/service}"><span class="style02"></span>科室介绍</a></li>
+            <li class="grey bgff"><a th:href="@{/home/guide}"><span class="style03"></span>就医指南</a></li>
+            <li class="bggrey"><a th:href="@{/home/seekGuide}"><span class="style04"></span>坐诊时间</a></li>
+            <li class="bggrey"><a th:href="@{/home/guide}"><span class="style06"></span>来院路线</a></li>
+            <li class="grey"><a th:href="@{/home/user/login}"><span class="style08"></span>信息查询</a></li>
+        </ul>
+    </div>
+    <div class="focusBox">
+        <ul class="pic">
+
+            <li><a th:href="@{http://www.zmxrmyy.org/NewsDetail-274.html}" target="_blank"
+                   title="我院举办专题讲座"><img th:src="@{/images/2017011216421587.jpg}" width="848"
+                                         height="440" alt="我院举办专题讲座"/></a></li>
+            <li><a th:href="@{http://www.zmxrmyy.com/NewsDetail-243.html}" target="_blank" title="医者仁心！"><img
+                    th:src="@{/images/2016111822464861.jpg}" width="848" height="440"
+                    alt="医者仁心!"/></a></li>
+            <li><a th:href="@{http://www.zmxrmyy.org/NewsDetail-274.html}" target="_blank"
+                   title="我院举办专题讲座"><img th:src="@{/images/2017011216421587.jpg}" width="848"
+                                         height="440" alt="我院举办专题讲座"/></a></li>
+            <li><a th:href="@{http://www.zmxrmyy.com/NewsDetail-243.html}" target="_blank" title="医者仁心！"><img
+                    th:src="@{/images/2016111822464861.jpg}" width="848" height="440"
+                    alt="医者仁心”！"/></a></li>
+            <li><a th:href="@{http://www.zmxrmyy.org/NewsDetail-274.html}" target="_blank"
+                   title="我院举办专题讲座"><img th:src="@{/images/2017011216421587.jpg}" width="848"
+                                         height="440" alt="我院举办专题讲座"/></a></li>
+            <li><a th:href="@{http://www.zmxrmyy.com/NewsDetail-243.html}" target="_blank" title="医者仁心！"><img
+                    th:src="@{/images/2016111822464861.jpg}" width="848" height="440"
+                    alt="医者仁心”！"/></a></li>
+        </ul>
+        <div class="txt-bg"></div>
+        <div class="txt" id="BannerInfo"></div>
+        <ul class="num">
+            <li><a href="javascript:"></a></li>
+            <li><a href="javascript:"></a></li>
+            <li><a href="javascript:"></a></li>
+            <li><a href="javascript:"></a></li>
+            <li><a href="javascript:"></a></li>
+            <li><a href="javascript:"></a></li>
+            <li><a href="javascript:"></a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</section>
+<!--重点科室和下面四个病区-->
+<section class="importBase">
+    <div class="title">重点科室</div>
+    <div class="prevNext"><a class="prevBtn" href="javascript:"></a><a class="nextBtn" href="javascript:"></a></div>
+    <div class="imports">
+        <ul>
+            <li class="frist">
+                <a class="ico ico01" href="Office-1.html">&nbsp;</a>
+                <dl>
+                    <dt><a href="Office-1.html">心血管内科一病区</a></dt>
+                    <dd>冠心病及心肌梗死</dd>
+                    <dd>心律失常心房纤颤射频</dd>
+                    <dd>先天性心脏病的介入……</dd>
+                    <dd>冠心病心力衰竭</dd>
+                    <dd>高血压病的诊断治疗</dd>
+                </dl>
+                <a class="btn" href="Office-1.html">&nbsp;</a>
+                <div class="shadow"></div>
+            </li>
+            <li>
+                <a class="ico ico01" href="Office-2.html">&nbsp;</a>
+                <dl>
+                    <dt><a href="Office-2.html">心血管内科二病区</a></dt>
+                    <dd>冠心病及心肌梗死</dd>
+                    <dd>心律失常心房纤颤射频</dd>
+                    <dd>先天性心脏病的介入……</dd>
+                    <dd>冠心病心力衰竭</dd>
+                    <dd>高血压病的诊断治疗</dd>
+                </dl>
+                <a class="btn" href="Office-2.html">&nbsp;</a>
+                <div class="shadow"></div>
+            </li>
+            <li>
+                <a class="ico ico02" href="Office-3.html">&nbsp;</a>
+                <dl>
+                    <dt><a href="Office-3.html">神经内科一病区</a></dt>
+                    <dd>头晕的诊断与治疗</dd>
+                    <dd>急性脑血管病</dd>
+                    <dd>脑白质脱髓鞘及记忆……</dd>
+
+                    <dd>神经内科疑难病诊治</dd>
+                </dl>
+                <a class="btn" href="Office-3.html">&nbsp;</a>
+                <div class="shadow"></div>
+            </li>
+            <li>
+                <a class="ico ico02" href="Office-5.html">&nbsp;</a>
+                <dl>
+                    <dt><a href="Office-5.html">神经内科二病区</a></dt>
+                    <dd>头晕的诊断与治疗</dd>
+                    <dd>急性脑血管病</dd>
+                    <dd>脑白质脱髓鞘及记忆……</dd>
+                    <dd>冠心病心力衰竭</dd>
+                    <dd>神经内科疑难病诊治</dd>
+                </dl>
+                <a class="btn" href="Office-5.html">&nbsp;</a>
+                <div class="shadow"></div>
+            </li>
+            <li>
+                <a class="ico ico06" href="Office-8.html">&nbsp;</a>
+                <dl>
+                    <dt><a href="Office-8.html">中医康复科</a></dt>
+                    <dd>神经系统疾病</dd>
+                    <dd>骨科术后康复</dd>
+                    <dd>骨关节疾病</dd>
+                    <dd>内科常见疾病及亚健康</dd>
+                </dl>
+                <a class="btn" href="Office-8.html">&nbsp;</a>
+                <div class="shadow"></div>
+            </li>
+            <li>
+                <a class="ico ico07" href="Office-22.html">&nbsp;</a>
+                <dl>
+                    <dt><a href="Office-22.html">新生儿重症监护室（NICU）</a></dt>
+
+                </dl>
+                <a class="btn" href="Office-22.html">&nbsp;</a>
+                <div class="shadow"></div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--知名专家 和 照片-->
+<section class="BaseMark expertBase">
+    <div class="title"><span>知名专家</span></div>
+    <div class="prevNext"><a class="prevBtn" href="javascript:"></a><a class="nextBtn" href="javascript:"></a></div>
+    <div class="SearchBase">
+        <div class="expertSearch"><a th:href="@{/hospital/expert}">按科室查看</a></div>
+    </div>
+    <div class="experts">
+        <ul data-num="0">
+            <li><a title="李雷"><img th:src="@{/images/201611141810044.JPG}" alt="李雷"
+                                   width="120" height="179"></a>
+                <div class="txt"><em>李雷</em>
+                    <p>内科 主任医师</p></div>
+
+            </li>
+            <li><a title="韩梅梅"><img th:src="@{/images/201611141904542.JPG}"
+                                    alt="韩梅梅" width="120" height="179"></a>
+                <div class="txt"><em>韩梅梅</em>
+                    <p>内科 副主任医师</p></div>
+
+            </li>
+
+
+            <li><a title="王五"><img th:src="@{/images/2016082917221938.jpg}"
+                                   alt="王五" width="120" height="179"></a>
+                <div class="txt"><em>王五</em>
+                    <p>普外科 主任医师</p></div>
+
+            </li>
+            <li><a title="王青"><img th:src="@{/images/2016083014243017.jpg}"
+                                   alt="王青" width="120" height="179"></a>
+                <div class="txt"><em>王青</em>
+                    <p>普外科 副主任医师</p></div>
+
+            </li>
+            <li><a title="杨丽娟"><img th:src="@{/images/2016102617041418.jpg}"
+                                    alt="杨丽娟" width="120" height="179"></a>
+                <div class="txt"><em>杨丽娟</em>
+                    <p>急诊 副主任医师</p></div>
+
+            </li>
+            <li><a title="郝新景"><img th:src="@{/images/2016102617103196.JPG}"
+                                    alt="郝新景" width="120" height="179"></a>
+                <div class="txt"><em>郝新景</em>
+                    <p>急诊 副主任医师</p></div>
+            </li>
+            <li><a title="丁晓"><img th:src="@{/images/2016102617183251.JPG}" alt="丁晓"
+                                   width="120" height="179"></a>
+                <div class="txt"><em>丁晓</em>
+                    <p>急诊 主任医师</p></div>
+
+            </li>
+            <li><a title="邵一博"><img th:src="@{/images/2016102617284261.JPG}"
+                                    alt="邵一博" width="122" height="179"></a>
+                <div class="txt"><em>邵一博</em>
+                    <p>急诊 副主任医师</p></div>
+
+            </li>
+
+        </ul>
+    </div>
+</section>
+<!--新闻中心 和科室导航-->
+<section class="indexNews">
+    <div class="notice">
+        <div class="tab-hd">
+            <ul class="tab-nav">
+                <li class="frist"><a href="https://www.zmxrmyy.com/NewsList-35.html" target="_blank">新闻中心</a></li>
+                <li class=""><a href="https://www.zmxrmyy.com/NewsList-36.html" target="_blank">医院公告</a></li>
+                <li class="active"><a href="https://www.zmxrmyy.com/NewsList-38.html" target="_blank">媒体报道</a></li>
+                <li class=""><a href="https://www.zmxrmyy.com/NewsList-39.html" target="_blank">专题报道</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="tab-bd" style="display: none;">
+            <ul>
+                <li><span><b>08</b><br><em>2021.01</em></span><a href="https://www.zmxrmyy.com/NewsDetail-4073.html"
+                                                                 title="偏头痛的侦察兵——发泡试验" target="_blank">偏头痛的侦察兵——发泡试验</a>
+                    <p>您还在为多年的头痛、头晕、耳鸣无法根治而苦恼吗？ 您还在为自己或家人反复脑梗死却找不到病因而痛苦吗？ 别着急，中牟县人民医院神经内科联合超声科开展的发泡……</p>
+                </li>
+                <li><span><b>08</b><br><em>2021.01</em></span><a href="https://www.zmxrmyy.com/NewsDetail-4072.html"
+                                                                 title="中牟县人民医院开展“2021年迎元旦职工越野赛”" target="_blank">中牟县人民医院开展“2021年迎元旦职工越野赛”</a>
+                    <p>迎新年职工长跑健身活动是一项健身活动，也是医院文化建设传统特色项目，寓意祝福新年、祈盼健康的美好愿望。2021年即将到来，12月31日下午，中牟县人民医院在贾鲁河畔组织开展“2021年迎元旦职工越……
+                    </p>
+                </li>
+                <li><span><b>08</b><br><em>2021.01</em></span><a href="https://www.zmxrmyy.com/NewsDetail-4071.html"
+                                                                 title="中牟县人民医院院长新年致辞：乘风破浪开新局 迎难而上育新机" target="_blank">中牟县人民医院院长新年致辞：乘风破浪开新局 迎难而上育新机</a>
+                    <p>院长致辞： 岁月不居，春秋代序，坎坷的2020年即将过去，充满希望的2021年正在款步走来。值此辞旧迎新之际，医院领导班子向全体干部职工致以节日的祝福！祝大家新年……</p>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-bd" style="display: none;">
+            <ul>
+                <li><span><b>23</b><br><em>2021.01</em></span><a href="https://www.zmxrmyy.com/NewsDetail-4097.html"
+                                                                 title="牟医.坐诊｜1月25日—1月31日门诊医生排班表" target="_blank">牟医.坐诊｜1月25日—1月31日门诊医生排班表</a>
+                    <p>注：如有特殊情况，请以当天实际坐诊专家为主。</p>
+                </li>
+                <li><span><b>18</b><br><em>2021.01</em></span><a href="https://www.zmxrmyy.com/NewsDetail-4086.html"
+                                                                 title="牟医.坐诊｜1月18-24日门诊医生排班表" target="_blank">牟医.坐诊｜1月18-24日门诊医生排班表</a>
+                    <p>注：如有变动，请以当天实际坐诊专家为准。</p>
+                </li>
+                <li><span><b>09</b><br><em>2021.01</em></span><a href="https://www.zmxrmyy.com/NewsDetail-4076.html"
+                                                                 title="牟医.坐诊｜2021年1月11-17日门诊医生排班表" target="_blank">牟医.坐诊｜2021年1月11-17日门诊医生排班表</a>
+                    <p></p>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-bd active" style="display: block;">
+            <ul>
+                <li><span><b>07</b><br><em>2016.11</em></span><a href="https://www.zmxrmyy.com/NewsDetail-238.html"
+                                                                 title="中牟县人民医院获“红手环志愿单位” 重在卒中防治" target="_blank">中牟县人民医院获“红手环志愿单位” 重在卒中防治</a>
+                    <p>大河网讯
+                        11月6日上午，中牟县人民医院隆重举行“红手环志愿单位”授牌仪式，而该院红手环志愿者服务团也同时成立，中国卒中学会红手环志愿者服务团秘书长王少石教授进行了授牌。“红手环志愿者服务团”是中……
+                    </p>
+                </li>
+                <li><span><b>06</b><br><em>2016.09</em></span><a href="https://www.zmxrmyy.com/NewsDetail-199.html"
+                                                                 title="【两学一做看实效】中牟县人民医院组织党员学党章" target="_blank">【两学一做看实效】中牟县人民医院组织党员学党章</a>
+                    <p>大河网讯
+                        5月30日获悉，为深入开展“两学一做”学习教育，进一步提高全院党员的自觉性、主动性、思想性、深刻性，中牟县人民医院于日前组织了贯彻党的十八大精神、领会新党章内涵专题学习活动。该院党总……
+                    </p>
+                </li>
+                <li><span><b>06</b><br><em>2016.09</em></span><a href="https://www.zmxrmyy.com/NewsDetail-198.html"
+                                                                 title="全民健身日舞出新生活 中牟县人民医院宣传健康知识" target="_blank">全民健身日舞出新生活 中牟县人民医院宣传健康知识</a>
+                    <p>大河网讯
+                        8月8日是全民健身日，为了宣传全民健身理念，进一步推广和普及全民健身运动，以此引领大家走向积极、向上、时尚、健康的生活方式。8月7日晚，中牟县人民医院与县教体局联合举办了“健康生活，远离……
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-bd" style="display: none;">
+            <ul>
+                <li><span><b>12</b><br><em>2020.09</em></span><a href="https://www.zmxrmyy.com/NewsDetail-3970.html"
+                                                                 title="牟医公益 | 急救知识摆地摊——翠鸣湖站" target="_blank">牟医公益 | 急救知识摆地摊——翠鸣湖站</a>
+                    <p>9月7日晚上，中牟县人民医院急救知识摆地摊来到了第二站——翠鸣湖，为现场百余名群众带来了急救知识讲座。 院长白金娥来到现场，为群众普及心肺复苏急救知识的重要性： ……</p>
+                </li>
+                <li><span><b>12</b><br><em>2020.09</em></span><a href="https://www.zmxrmyy.com/NewsDetail-3969.html"
+                                                                 title="牟医公益 | 急救知识摆地摊 通俗易懂惠民众" target="_blank">牟医公益 | 急救知识摆地摊 通俗易懂惠民众</a>
+                    <p>为了增强大家的急救意识，更好的宣传和普及急救知识，提高我县群众自救、急救、互救能力，营造“人人学急救，人人会急救”的良好氛围。在院长白金娥的安排下，9月4日晚上，中牟县人民医院在东风路与中兴路交叉……
+                    </p>
+                </li>
+                <li><span><b>02</b><br><em>2020.09</em></span><a href="https://www.zmxrmyy.com/NewsDetail-2956.html"
+                                                                 title="“百姓健康系我心，党员服务进社区” -我院和东大街社区联合开展主题党日活动" target="_blank">“百姓健康系我心，党员服务进社区”
+                    -我院和东大街社区联合开展主题党日活动</a>
+                    <p>根据县委组织部共驻共建工作部署，推进机关党组织和在职党员“双报到”活动深入开展，推动机关党组织和在职党员“双报到、双服务、双奉献”，8月21日上午，我院党总支联合青年路办事处东大街社区党总支举办“……
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="DepartNav">
+        <div class="title"><span>科室导航</span></div>
+        <div class="list"><h3>心血管内科一病区<em></em>
+            心血管内科二病区</h3></br>
+            <h3>神经内科一病区<em></em>
+                神经内科二病区</h3></br>
+            <h3>中医康复科<em></em>
+                皮肤科</h3></br>
+            <h3>妇科<em></em>
+                呼吸内科</h3>
+        </div>
+    </div>
+    <div class="clear"></div>
+</section>
+<!--公共尾部-->
+<div th:insert="~{/home/common/footer::foot}"></div>
+
+</body>
+</html>
